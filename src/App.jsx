@@ -53,7 +53,7 @@ function App() {
   const images = [];
   for(const planet in planets){
     images.push(
-      <button key={planet} onClick={displayFact}>
+      <button key={planet} onClick={displayFact} className='planet'>
         <img src={planets[planet].image} alt = {planet}/>
       </button>
       );

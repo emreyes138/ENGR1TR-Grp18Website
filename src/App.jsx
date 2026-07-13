@@ -1,7 +1,13 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+
+import mercury from './assets/mercury.png'
+import venus from './assets/venus.png'
+import earth from './assets/earth.png'
+import mars from './assets/mars.png'
+import jupiter from './assets/jupiter.png'
+import saturn from './assets/saturn.png'
+import uranus from './assets/uranus.png'
+import neptune from './assets/neptune.png'
 import './App.css'
 
 function App() {

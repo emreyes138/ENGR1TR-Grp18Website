@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Factonaut mission data and NASA-based facts about Earth.">
+  <title>Earth | Factonaut</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-planet="earth">
+  <header class="site-header">
+    <a class="brand" href="index.html">Facto<span>naut</span></a>
+    <nav class="nav-links"><a href="index.html">Mission Control</a><a href="index.html#passport">Space Passport</a><button class="sound-toggle" data-sound-toggle type="button"></button></nav>
+  </header>
+  <main>
+    <section class="container planet-hero">
+      <div class="planet-hero-grid">
+        <div class="planet-visual" id="planet-visual" title="Click five times for a secret message">
+          <img src="assets/images/earth.webp" alt="NASA image of Earth">
+          <span class="image-hint">Tap the planet 5 times</span>
+        </div>
+        <div>
+          <div class="eyebrow">Field Note 03 / Solar Route</div>
+          <h1 class="planet-title">Earth</h1>
+          <p class="personality">“You are currently standing here. Please leave a good review.”</p>
+          <p class="lede">Our home planet and the only world currently known to support life.</p>
+          <div class="planet-meta"><span class="chip">Rocky planet</span><span class="chip">Passport stamp collected ✓</span></div>
+          <p class="credit">NASA image credit: NASA/Apollo 17 crew. <a href="https://science.nasa.gov/earth/facts/" target="_blank" rel="noopener">View the official NASA facts</a>.</p>
+        </div>
+      </div>
+      <div class="stats-grid"><div class="stat-card"><span>Planet order</span><strong>3rd from the Sun</strong></div>
+<div class="stat-card"><span>Day length</span><strong>24 hours</strong></div>
+<div class="stat-card"><span>Year length</span><strong>365.25 days</strong></div>
+<div class="stat-card"><span>Moons / rings</span><strong>1 / None</strong></div></div>
+    </section>
+
+    <section class="container section">
+      <div class="content-layout">
+        <article class="glass-card">
+          <div class="eyebrow">Observed Data</div><h2>Field notes: Earth</h2>
+          <ul class="fact-list"><li>Earth is the third planet from the Sun.</li>
+<li>Earth is the fifth-largest planet in our solar system.</li>
+<li>Earth has an average radius of about 6,371 kilometers.</li>
+<li>Earth has one moon and no rings.</li>
+<li>Earth is the only planet currently known to support life.</li>
+<li>Earth is the only planet in our solar system with liquid water on its surface.</li>
+<li>About 71% of Earth’s surface is covered by ocean.</li></ul>
+        </article>
+        <div class="sticky">
+          <aside class="glass-card" aria-live="polite">
+            <div class="eyebrow">Random Field Note</div>
+            <div class="fact-output" id="planet-random-output">Press the button to receive a random Earth fact.</div>
+            <button class="button" id="planet-random-button" type="button">📡 Print Another Fact</button>
+          </aside>
+          <aside class="glass-card">
+            <div class="survival-row"><div><div class="eyebrow">Human Landing Estimate</div><h2>Survival rating</h2></div><div class="survival-score">10 / 10</div></div>
+            <div class="survival-meter"><span style="width:100%"></span></div>
+            <strong>Main problems:</strong><ul class="hazards"><li>Bad Wi-Fi in some places</li>
+<li>Weather</li>
+<li>Humans</li></ul>
+          </aside>
+          <aside class="quiz-card">
+            <div class="eyebrow">Flight School Check</div><h2>Earth checkpoint</h2>
+            <p>Which planet is currently known to support life?</p>
+            <div class="quiz-options" id="planet-quiz-options"></div>
+            <p class="quiz-feedback" id="planet-quiz-feedback" aria-live="polite"></p>
+          </aside>
+        </div>
+      </div>
+      <nav class="pager" aria-label="Planet navigation"><a href="venus.html">← Venus</a><a class="home-link" href="index.html">Return to Field Headquarters</a><a class="next" href="mars.html">Mars →</a></nav>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container">Field notes and imagery are based on NASA Solar System resources.</div></footer>
+  <script src="assets/data.js"></script>
+  <script src="assets/common.js"></script>
+  <script src="assets/planet.js"></script>
+</body>
+</html>

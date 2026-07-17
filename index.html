@@ -1,13 +1,115 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>grp18website</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content=" Factonaut: mission to uncover the secret of the stars">
+  <title>Factonaut | One Small Click, One Giant Fact</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Facto<span>naut</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#planets">Destinations</a>
+      <a href="#passport">Space Passport</a>
+      <button class="sound-toggle" data-sound-toggle type="button"></button>
+    </nav>
+  </header>
+  <main>
+    <section class="container hero">
+      <div class="hero-copy">
+        <div class="eyebrow">NASA Planet Field Notes • Mission 08</div>
+        <h1 class="main-title">Factonaut</h1>
+        <p class="tagline">A slightly serious, slightly ridiculous field guide to all eight planets. Press the red launch button and let Mission Control pick your destination.</p>
+        <div class="actions">
+          <button class="button" id="launch-button" type="button">🚀 Launch Random Mission</button>
+          <a class="button secondary" href="#planets">Open the Field Guide</a>
+        </div>
+      </div>
+      <div class="rocket" id="rocket" aria-hidden="true">🚀</div>
+      <article class="transmission" id="transmission" aria-live="polite">
+        <div class="transmission-head"><span class="signal">Mission Report</span><span>Form F-08 • NASA-based data</span></div>
+        <h2 id="random-planet-name">Ready for launch?</h2>
+        <p id="random-fact">Press the launch button and Mission Control will choose a random planet fact.</p>
+        <div class="actions" style="justify-content:flex-start"><a class="button secondary hidden" id="random-link" href="#">Explore Planet</a></div>
+      </article>
+    </section>
+
+    <section class="container section" id="planets">
+      <div class="section-head"><div class="eyebrow">Solar Route</div><h2 class="section-title">Pick a destination</h2><p class="section-copy">Follow the planets in order, or ignore the route entirely and choose the one with the best photograph.</p></div>
+      <div class="planet-grid"><a class="planet-card" data-planet-card="mercury" href="mercury.html">
+  <span class="visited-badge hidden">✓ Visited</span>
+  <img src="assets/images/mercury.webp" alt="NASA image of Mercury" loading="lazy">
+  <div class="planet-card-body"><h3>Mercury</h3><p>Small, speedy, and permanently overcooked.</p></div>
+</a>
+<a class="planet-card" data-planet-card="venus" href="venus.html">
+  <span class="visited-badge hidden">✓ Visited</span>
+  <img src="assets/images/venus.jpg" alt="NASA image of Venus" loading="lazy">
+  <div class="planet-card-body"><h3>Venus</h3><p>Earth’s evil twin has entered the chat.</p></div>
+</a>
+<a class="planet-card" data-planet-card="earth" href="earth.html">
+  <span class="visited-badge hidden">✓ Visited</span>
+  <img src="assets/images/earth.webp" alt="NASA image of Earth" loading="lazy">
+  <div class="planet-card-body"><h3>Earth</h3><p>You are currently standing here. Please leave a good review.</p></div>
+</a>
+<a class="planet-card" data-planet-card="mars" href="mars.html">
+  <span class="visited-badge hidden">✓ Visited</span>
+  <img src="assets/images/mars.jpg" alt="NASA image of Mars" loading="lazy">
+  <div class="planet-card-body"><h3>Mars</h3><p>Red, dusty, and still waiting for humans.</p></div>
+</a>
+<a class="planet-card" data-planet-card="jupiter" href="jupiter.html">
+  <span class="visited-badge hidden">✓ Visited</span>
+  <img src="assets/images/jupiter.webp" alt="NASA image of Jupiter" loading="lazy">
+  <div class="planet-card-body"><h3>Jupiter</h3><p>The biggest planet with the biggest ego.</p></div>
+</a>
+<a class="planet-card" data-planet-card="saturn" href="saturn.html">
+  <span class="visited-badge hidden">✓ Visited</span>
+  <img src="assets/images/saturn.webp" alt="NASA image of Saturn" loading="lazy">
+  <div class="planet-card-body"><h3>Saturn</h3><p>I put a ring on it. Actually, a lot of rings.</p></div>
+</a>
+<a class="planet-card" data-planet-card="uranus" href="uranus.html">
+  <span class="visited-badge hidden">✓ Visited</span>
+  <img src="assets/images/uranus.webp" alt="NASA image of Uranus" loading="lazy">
+  <div class="planet-card-body"><h3>Uranus</h3><p>Please pronounce my name carefully.</p></div>
+</a>
+<a class="planet-card" data-planet-card="neptune" href="neptune.html">
+  <span class="visited-badge hidden">✓ Visited</span>
+  <img src="assets/images/neptune.webp" alt="NASA image of Neptune" loading="lazy">
+  <div class="planet-card-body"><h3>Neptune</h3><p>Cold, windy, and very far from your Wi-Fi.</p></div>
+</a></div>
+    </section>
+
+    <section class="container section" id="passport">
+      <div class="two-column">
+        <article class="passport-card">
+          <div class="eyebrow">Field Passport</div>
+          <h2>Stamp every stop</h2>
+          <p class="section-copy" data-passport-count>0 / 8 planets discovered</p>
+          <div class="progress-track"><div class="progress-fill" data-passport-progress></div></div>
+          <div class="passport-grid"><div class="passport-stamp" data-passport-stamp="mercury" data-name="Mercury"></div>
+<div class="passport-stamp" data-passport-stamp="venus" data-name="Venus"></div>
+<div class="passport-stamp" data-passport-stamp="earth" data-name="Earth"></div>
+<div class="passport-stamp" data-passport-stamp="mars" data-name="Mars"></div>
+<div class="passport-stamp" data-passport-stamp="jupiter" data-name="Jupiter"></div>
+<div class="passport-stamp" data-passport-stamp="saturn" data-name="Saturn"></div>
+<div class="passport-stamp" data-passport-stamp="uranus" data-name="Uranus"></div>
+<div class="passport-stamp" data-passport-stamp="neptune" data-name="Neptune"></div></div>
+          <p class="achievement hidden" data-achievement></p>
+        </article>
+        <article class="quiz-card">
+          <div class="eyebrow">Flight School</div>
+          <h2>Preflight knowledge check</h2>
+          <p id="home-quiz-question"></p>
+          <div class="quiz-options" id="home-quiz-options"></div>
+          <p class="quiz-feedback" id="home-quiz-feedback" aria-live="polite"></p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container">Facts and imagery credited to NASA • Student-built solar system field guide • Click the Factonaut logo five times for a secret.</div></footer>
+  <script src="assets/data.js"></script>
+  <script src="assets/common.js"></script>
+  <script src="assets/index.js"></script>
+</body>
 </html>

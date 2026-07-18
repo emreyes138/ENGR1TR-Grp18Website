@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Factonaut mission data and NASA-based facts about Neptune.">
+  <title>Neptune | Factonaut</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-planet="neptune">
+  <header class="site-header">
+    <a class="brand" href="index.html">Facto<span>naut</span></a>
+    <nav class="nav-links"><a href="index.html">Mission Control</a><a href="index.html#passport">Space Passport</a><button class="sound-toggle" data-sound-toggle type="button"></button></nav>
+  </header>
+  <main>
+    <section class="container planet-hero">
+      <div class="planet-hero-grid">
+        <div class="planet-visual" id="planet-visual" title="Click five times for a secret message">
+          <img src="assets/images/neptune.webp" alt="NASA image of Neptune">
+          <span class="image-hint">Tap the planet 5 times</span>
+        </div>
+        <div>
+          <div class="eyebrow">Field Note 08 / Solar Route</div>
+          <h1 class="planet-title">Neptune</h1>
+          <p class="personality">“Cold, windy, and very far from your Wi-Fi.”</p>
+          <p class="lede">The farthest major planet from the Sun and the windiest world in the solar system.</p>
+          <div class="planet-meta"><span class="chip">Ice giant</span><span class="chip">Passport stamp collected ✓</span></div>
+          <p class="credit">NASA image credit: NASA/JPL-Caltech. <a href="https://science.nasa.gov/neptune/neptune-facts/" target="_blank" rel="noopener">View the official NASA facts</a>.</p>
+        </div>
+      </div>
+      <div class="stats-grid"><div class="stat-card"><span>Planet order</span><strong>8th from the Sun</strong></div>
+<div class="stat-card"><span>Day length</span><strong>About 16 hours</strong></div>
+<div class="stat-card"><span>Year length</span><strong>About 165 Earth years</strong></div>
+<div class="stat-card"><span>Moons / rings</span><strong>16 known / Five main rings</strong></div></div>
+    </section>
+
+    <section class="container section">
+      <div class="content-layout">
+        <article class="glass-card">
+          <div class="eyebrow">Observed Data</div><h2>Field notes: Neptune</h2>
+          <ul class="fact-list"><li>Neptune is the eighth and most distant planet from the Sun.</li>
+<li>Neptune is the fourth-largest planet and is about four times wider than Earth.</li>
+<li>Neptune is an ice giant made of materials including water, methane, and ammonia.</li>
+<li>Neptune does not have a solid surface.</li>
+<li>One day on Neptune lasts about 16 hours.</li>
+<li>Neptune takes about 165 Earth years to orbit the Sun.</li>
+<li>Neptune has 16 known moons, and Triton is the largest.</li>
+<li>Neptune has at least five main rings and four prominent ring arcs.</li>
+<li>Neptune is the windiest planet, with winds faster than 1,200 miles per hour.</li></ul>
+        </article>
+        <div class="sticky">
+          <aside class="glass-card" aria-live="polite">
+            <div class="eyebrow">Random Field Note</div>
+            <div class="fact-output" id="planet-random-output">Press the button to receive a random Neptune fact.</div>
+            <button class="button" id="planet-random-button" type="button">📡 Print Another Fact</button>
+          </aside>
+          <aside class="glass-card">
+            <div class="survival-row"><div><div class="eyebrow">Human Landing Estimate</div><h2>Survival rating</h2></div><div class="survival-score">0 / 10</div></div>
+            <div class="survival-meter"><span style="width:0%"></span></div>
+            <strong>Main problems:</strong><ul class="hazards"><li>Supersonic winds</li>
+<li>No solid surface</li>
+<li>Extreme cold</li></ul>
+          </aside>
+          <aside class="quiz-card">
+            <div class="eyebrow">Flight School Check</div><h2>Neptune checkpoint</h2>
+            <p>Which planet has the fastest winds?</p>
+            <div class="quiz-options" id="planet-quiz-options"></div>
+            <p class="quiz-feedback" id="planet-quiz-feedback" aria-live="polite"></p>
+          </aside>
+        </div>
+      </div>
+      <nav class="pager" aria-label="Planet navigation"><a href="uranus.html">← Uranus</a><a class="home-link" href="index.html">Return to Field Headquarters</a><a class="next" href="mercury.html">Mercury →</a></nav>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container">Field notes and imagery are based on NASA Solar System resources.</div></footer>
+  <script src="assets/data.js"></script>
+  <script src="assets/common.js"></script>
+  <script src="assets/planet.js"></script>
+</body>
+</html>

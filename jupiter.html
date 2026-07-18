@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Factonaut mission data and NASA-based facts about Jupiter.">
+  <title>Jupiter | Factonaut</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-planet="jupiter">
+  <header class="site-header">
+    <a class="brand" href="index.html">Facto<span>naut</span></a>
+    <nav class="nav-links"><a href="index.html">Mission Control</a><a href="index.html#passport">Space Passport</a><button class="sound-toggle" data-sound-toggle type="button"></button></nav>
+  </header>
+  <main>
+    <section class="container planet-hero">
+      <div class="planet-hero-grid">
+        <div class="planet-visual" id="planet-visual" title="Click five times for a secret message">
+          <img src="assets/images/jupiter.webp" alt="NASA image of Jupiter">
+          <span class="image-hint">Tap the planet 5 times</span>
+        </div>
+        <div>
+          <div class="eyebrow">Field Note 05 / Solar Route</div>
+          <h1 class="planet-title">Jupiter</h1>
+          <p class="personality">“The biggest planet with the biggest ego.”</p>
+          <p class="lede">The largest planet in our solar system and home to the Great Red Spot.</p>
+          <div class="planet-meta"><span class="chip">Gas giant</span><span class="chip">Passport stamp collected ✓</span></div>
+          <p class="credit">NASA image credit: NASA/JPL-Caltech/SwRI/MSSS; image processing by Kevin M. Gill. <a href="https://science.nasa.gov/jupiter/jupiter-facts/" target="_blank" rel="noopener">View the official NASA facts</a>.</p>
+        </div>
+      </div>
+      <div class="stats-grid"><div class="stat-card"><span>Planet order</span><strong>5th from the Sun</strong></div>
+<div class="stat-card"><span>Day length</span><strong>9.9 hours</strong></div>
+<div class="stat-card"><span>Year length</span><strong>About 12 Earth years</strong></div>
+<div class="stat-card"><span>Moons / rings</span><strong>Many / Faint rings</strong></div></div>
+    </section>
+
+    <section class="container section">
+      <div class="content-layout">
+        <article class="glass-card">
+          <div class="eyebrow">Observed Data</div><h2>Field notes: Jupiter</h2>
+          <ul class="fact-list"><li>Jupiter is the fifth planet from the Sun.</li>
+<li>Jupiter is the largest planet in our solar system.</li>
+<li>Jupiter has an equatorial radius of about 71,492 kilometers.</li>
+<li>One day on Jupiter lasts only about 9.9 hours, the shortest day of any planet.</li>
+<li>Jupiter takes about 12 Earth years to orbit the Sun.</li>
+<li>Jupiter is a gas giant made mostly of hydrogen and helium.</li>
+<li>Jupiter does not have a true solid surface.</li>
+<li>Jupiter has faint rings and many moons, including Io, Europa, Ganymede, and Callisto.</li>
+<li>Jupiter’s Great Red Spot is a giant storm that has lasted for centuries.</li></ul>
+        </article>
+        <div class="sticky">
+          <aside class="glass-card" aria-live="polite">
+            <div class="eyebrow">Random Field Note</div>
+            <div class="fact-output" id="planet-random-output">Press the button to receive a random Jupiter fact.</div>
+            <button class="button" id="planet-random-button" type="button">📡 Print Another Fact</button>
+          </aside>
+          <aside class="glass-card">
+            <div class="survival-row"><div><div class="eyebrow">Human Landing Estimate</div><h2>Survival rating</h2></div><div class="survival-score">0 / 10</div></div>
+            <div class="survival-meter"><span style="width:0%"></span></div>
+            <strong>Main problems:</strong><ul class="hazards"><li>No solid surface</li>
+<li>Powerful radiation</li>
+<li>Enormous storms</li></ul>
+          </aside>
+          <aside class="quiz-card">
+            <div class="eyebrow">Flight School Check</div><h2>Jupiter checkpoint</h2>
+            <p>Which planet has the shortest day?</p>
+            <div class="quiz-options" id="planet-quiz-options"></div>
+            <p class="quiz-feedback" id="planet-quiz-feedback" aria-live="polite"></p>
+          </aside>
+        </div>
+      </div>
+      <nav class="pager" aria-label="Planet navigation"><a href="mars.html">← Mars</a><a class="home-link" href="index.html">Return to Field Headquarters</a><a class="next" href="saturn.html">Saturn →</a></nav>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container">Field notes and imagery are based on NASA Solar System resources.</div></footer>
+  <script src="assets/data.js"></script>
+  <script src="assets/common.js"></script>
+  <script src="assets/planet.js"></script>
+</body>
+</html>

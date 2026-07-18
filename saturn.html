@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Factonaut mission data and NASA-based facts about Saturn.">
+  <title>Saturn | Factonaut</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-planet="saturn">
+  <header class="site-header">
+    <a class="brand" href="index.html">Facto<span>naut</span></a>
+    <nav class="nav-links"><a href="index.html">Mission Control</a><a href="index.html#passport">Space Passport</a><button class="sound-toggle" data-sound-toggle type="button"></button></nav>
+  </header>
+  <main>
+    <section class="container planet-hero">
+      <div class="planet-hero-grid">
+        <div class="planet-visual" id="planet-visual" title="Click five times for a secret message">
+          <img src="assets/images/saturn.webp" alt="NASA image of Saturn">
+          <span class="image-hint">Tap the planet 5 times</span>
+        </div>
+        <div>
+          <div class="eyebrow">Field Note 06 / Solar Route</div>
+          <h1 class="planet-title">Saturn</h1>
+          <p class="personality">“I put a ring on it. Actually, a lot of rings.”</p>
+          <p class="lede">The second-largest planet, famous for its spectacular ring system.</p>
+          <div class="planet-meta"><span class="chip">Gas giant</span><span class="chip">Passport stamp collected ✓</span></div>
+          <p class="credit">NASA image credit: NASA/JPL-Caltech/Space Science Institute. <a href="https://science.nasa.gov/saturn/facts/" target="_blank" rel="noopener">View the official NASA facts</a>.</p>
+        </div>
+      </div>
+      <div class="stats-grid"><div class="stat-card"><span>Planet order</span><strong>6th from the Sun</strong></div>
+<div class="stat-card"><span>Day length</span><strong>10.7 hours</strong></div>
+<div class="stat-card"><span>Year length</span><strong>29.4 Earth years</strong></div>
+<div class="stat-card"><span>Moons / rings</span><strong>Many / Large ring system</strong></div></div>
+    </section>
+
+    <section class="container section">
+      <div class="content-layout">
+        <article class="glass-card">
+          <div class="eyebrow">Observed Data</div><h2>Field notes: Saturn</h2>
+          <ul class="fact-list"><li>Saturn is the sixth planet from the Sun.</li>
+<li>Saturn is the second-largest planet in our solar system.</li>
+<li>Saturn is a gas giant made mostly of hydrogen and helium.</li>
+<li>Saturn does not have a true solid surface.</li>
+<li>One day on Saturn lasts about 10.7 hours.</li>
+<li>Saturn takes about 29.4 Earth years to orbit the Sun.</li>
+<li>Saturn’s rings are made of billions of pieces of ice and rock.</li>
+<li>Saturn has more known moons than any other planet.</li>
+<li>Titan and Enceladus are two of Saturn’s best-known moons.</li></ul>
+        </article>
+        <div class="sticky">
+          <aside class="glass-card" aria-live="polite">
+            <div class="eyebrow">Random Field Note</div>
+            <div class="fact-output" id="planet-random-output">Press the button to receive a random Saturn fact.</div>
+            <button class="button" id="planet-random-button" type="button">📡 Print Another Fact</button>
+          </aside>
+          <aside class="glass-card">
+            <div class="survival-row"><div><div class="eyebrow">Human Landing Estimate</div><h2>Survival rating</h2></div><div class="survival-score">0 / 10</div></div>
+            <div class="survival-meter"><span style="width:0%"></span></div>
+            <strong>Main problems:</strong><ul class="hazards"><li>No solid surface</li>
+<li>Powerful winds</li>
+<li>Extreme cold</li></ul>
+          </aside>
+          <aside class="quiz-card">
+            <div class="eyebrow">Flight School Check</div><h2>Saturn checkpoint</h2>
+            <p>What are Saturn’s rings mostly made of?</p>
+            <div class="quiz-options" id="planet-quiz-options"></div>
+            <p class="quiz-feedback" id="planet-quiz-feedback" aria-live="polite"></p>
+          </aside>
+        </div>
+      </div>
+      <nav class="pager" aria-label="Planet navigation"><a href="jupiter.html">← Jupiter</a><a class="home-link" href="index.html">Return to Field Headquarters</a><a class="next" href="uranus.html">Uranus →</a></nav>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container">Field notes and imagery are based on NASA Solar System resources.</div></footer>
+  <script src="assets/data.js"></script>
+  <script src="assets/common.js"></script>
+  <script src="assets/planet.js"></script>
+</body>
+</html>

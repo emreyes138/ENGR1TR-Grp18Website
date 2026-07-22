@@ -14,7 +14,5 @@ Users can view random fun facts of a planet in our solar system by clicking on e
   statistics, and other shared page sections.
 - Added responsive layouts so the pages adjust for desktop, tablet, and mobile
   screen sizes.
-
-This stylesheet is the first basic version of the design. The visual styling
-will be developed and improved gradually in future commits.
+- Removed old prototype files to reduce clutter.
 

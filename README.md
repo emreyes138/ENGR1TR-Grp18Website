@@ -17,9 +17,17 @@ Users can view random fun facts of a planet in our solar system by clicking on e
 - Removed old prototype files to reduce clutter.
 
 ## Use of AI and outside resources
+
 Htet:
-- Asked ChatGPT for ideas on the planet quizzes.
+
+- Consulted ChatGPT as a design sounding board for the website. The
+  discussions about semantic HTML structure, responsive page organization, and the
+  balance and contrast of the retro-inspired color palette.
+- Recevied feedback and the suggestions for the group's existing work, selected the
+  ideas that suited the project, and made them work.
+- Asked ChatGPT to brainstorm ideas for the planet quizzes.
 - Obtained audio for button sounds on web.
 
 Emily:
+
 - Asked Gemini about formatting photos into buttons (in the beginning stages). Only asked for clarification on how buttons work, not for Gemini to write code for me.

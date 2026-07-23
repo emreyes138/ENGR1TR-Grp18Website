@@ -3,11 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Search engines use the description; browsers display the title on the tab. -->
   <meta name="description" content=" Factonaut: mission to uncover the secret of the stars">
   <title>Factonaut | One Small Click, One Giant Fact</title>
+  <!-- Vite processes this source stylesheet and the browser applies it to matching classes/IDs. -->
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+  <!-- Shared site header: the brand returns home and the navigation jumps to sections on this page. -->
   <header class="site-header">
     <a class="brand" href="index.html">Facto<span>naut</span></a>
     <nav class="nav-links" aria-label="Main navigation">
@@ -16,8 +19,11 @@
       <button class="sound-toggle" data-sound-toggle type="button"></button>
     </nav>
   </header>
+  <!-- main identifies the page's unique primary content for browsers and assistive technology. -->
   <main>
+    <!-- Hero section: mission introduction, launch control, and JavaScript-updated result panel. -->
     <section class="container hero">
+      <!-- Introductory copy and controls. IDs give index.js reliable elements to select. -->
       <div class="hero-copy">
         <div class="eyebrow">NASA Planet Field Notes • Mission 08</div>
         <h1 class="main-title">Factonaut</h1>
@@ -28,6 +34,7 @@
         </div>
       </div>
       <div class="rocket" id="rocket" aria-hidden="true">🚀</div>
+      <!-- aria-live politely announces updated mission results to assistive technology. -->
       <article class="transmission" id="transmission" aria-live="polite">
         <div class="transmission-head"><span class="signal">Mission Report</span><span>Form F-08 • NASA-based data</span></div>
         <h2 id="random-planet-name">Ready for launch?</h2>
@@ -36,8 +43,10 @@
       </article>
     </section>
 
+    <!-- Destination section: each card is a normal link to one planet's HTML page. -->
     <section class="container section" id="planets">
       <div class="section-head"><div class="eyebrow">Solar Route</div><h2 class="section-title">Pick a destination</h2><p class="section-copy">Follow the planets in order, or ignore the route entirely and choose the one with the best photograph.</p></div>
+      <!-- data-planet-card connects each card to the visited-passport state in common.js. -->
       <div class="planet-grid"><a class="planet-card" data-planet-card="mercury" href="mercury.html">
   <span class="visited-badge hidden">✓ Visited</span>
   <img src="assets/images/mercury.webp" alt="NASA image of Mercury" loading="lazy">
@@ -80,8 +89,10 @@
 </a></div>
     </section>
 
+    <!-- Interactive progress and quiz section. The #passport ID is also a navigation target. -->
     <section class="container section" id="passport">
       <div class="two-column">
+        <!-- common.js fills the stamps, count, progress width, and achievement from localStorage. -->
         <article class="passport-card">
           <div class="eyebrow">Field Passport</div>
           <h2>Stamp every stop</h2>
@@ -97,6 +108,7 @@
 <div class="passport-stamp" data-passport-stamp="neptune" data-name="Neptune"></div></div>
           <p class="achievement hidden" data-achievement></p>
         </article>
+        <!-- index.js inserts one random question and creates its answer buttons here. -->
         <article class="quiz-card">
           <div class="eyebrow">Flight School</div>
           <h2>Preflight knowledge check</h2>
@@ -107,7 +119,9 @@
       </div>
     </section>
   </main>
+  <!-- Shared page footer with source and Easter-egg information. -->
   <footer class="site-footer"><div class="container">Facts and imagery credited to NASA • Student-built solar system field guide • Click the Factonaut logo five times for a secret.</div></footer>
+  <!-- Script order is required: data first, shared Factonaut tools second, home behavior last. -->
   <script src="assets/data.js"></script>
   <script src="assets/common.js"></script>
   <script src="assets/index.js"></script>

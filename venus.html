@@ -1,20 +1,29 @@
 <!doctype html>
+<!-- Declares English as the document language for browsers and assistive technology. -->
 <html lang="en">
 <head>
+  <!-- Character encoding and responsive viewport settings used by every page. -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Page-specific search description and browser-tab title. -->
   <meta name="description" content="Factonaut mission data and NASA-based facts about Venus.">
   <title>Venus | Factonaut</title>
+  <!-- Shared visual rules for the header, planet layout, cards, quiz, and responsive states. -->
   <link rel="stylesheet" href="assets/style.css">
 </head>
+<!-- planet.js reads data-planet to select Venus's record from window.PLANETS. -->
 <body data-planet="venus">
+  <!-- Shared header links back to Mission Control and the saved passport section. -->
   <header class="site-header">
     <a class="brand" href="index.html">Facto<span>naut</span></a>
     <nav class="nav-links"><a href="index.html">Mission Control</a><a href="index.html#passport">Space Passport</a><button class="sound-toggle" data-sound-toggle type="button"></button></nav>
   </header>
+  <!-- Primary page content begins here. -->
   <main>
+    <!-- Planet introduction: clickable photograph, summary, source credit, and key statistics. -->
     <section class="container planet-hero">
       <div class="planet-hero-grid">
+        <!-- planet.js listens for five clicks on this ID to reveal the planet Easter egg. -->
         <div class="planet-visual" id="planet-visual" title="Click five times for a secret message">
           <img src="assets/images/venus.jpg" alt="NASA image of Venus">
           <span class="image-hint">Tap the planet 5 times</span>
@@ -34,8 +43,10 @@
 <div class="stat-card"><span>Moons / rings</span><strong>0 / None</strong></div></div>
     </section>
 
+    <!-- Detailed facts and interactive mission tools. -->
     <section class="container section">
       <div class="content-layout">
+        <!-- Semantic article containing the page's permanent NASA-based fact list. -->
         <article class="glass-card">
           <div class="eyebrow">Observed Data</div><h2>Field notes: Venus</h2>
           <ul class="fact-list"><li>Venus is the second planet from the Sun.</li>
@@ -47,12 +58,15 @@
 <li>A runaway greenhouse effect makes Venus the hottest planet in our solar system.</li>
 <li>The average surface temperature on Venus is about 872°F (467°C).</li></ul>
         </article>
+        <!-- Sticky sidebar stays visible on wide screens and stacks normally on smaller screens. -->
         <div class="sticky">
+          <!-- aria-live announces random fact text after planet.js updates the output. -->
           <aside class="glass-card" aria-live="polite">
             <div class="eyebrow">Random Field Note</div>
             <div class="fact-output" id="planet-random-output">Press the button to receive a random Venus fact.</div>
             <button class="button" id="planet-random-button" type="button">📡 Print Another Fact</button>
           </aside>
+          <!-- Survival estimate; the inline span width fills the CSS survival meter. -->
           <aside class="glass-card">
             <div class="survival-row"><div><div class="eyebrow">Human Landing Estimate</div><h2>Survival rating</h2></div><div class="survival-score">0.1 / 10</div></div>
             <div class="survival-meter"><span style="width:1.0%"></span></div>
@@ -60,6 +74,7 @@
 <li>Sulfuric acid clouds</li>
 <li>Extreme heat</li></ul>
           </aside>
+          <!-- planet.js creates answer buttons inside the empty options container. -->
           <aside class="quiz-card">
             <div class="eyebrow">Flight School Check</div><h2>Venus checkpoint</h2>
             <p>Why is Venus the hottest planet?</p>
@@ -71,7 +86,9 @@
       <nav class="pager" aria-label="Planet navigation"><a href="mercury.html">← Mercury</a><a class="home-link" href="index.html">Return to Field Headquarters</a><a class="next" href="earth.html">Earth →</a></nav>
     </section>
   </main>
+  <!-- Shared source-credit footer. -->
   <footer class="site-footer"><div class="container">Field notes and imagery are based on NASA Solar System resources.</div></footer>
+  <!-- Required order: planet data, shared Factonaut utilities, then planet-page behavior. -->
   <script src="assets/data.js"></script>
   <script src="assets/common.js"></script>
   <script src="assets/planet.js"></script>

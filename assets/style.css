@@ -1,3 +1,10 @@
+/*
+ * Factonaut's active source stylesheet.
+ * The HTML pages link to assets/style.css; Vite processes this file during a build.
+ * Rules are grouped by the page component they style so the cascade is easier to trace.
+ */
+
+/* Design tokens: reusable colors, surfaces, borders, and the hard-edged card shadow. */
 :root {
   --paper: #f3ead7;
   --paper-deep: #e5d4b5;
@@ -26,6 +33,7 @@
   --border: var(--line);
 }
 
+/* Global defaults: predictable sizing, smooth anchor scrolling, typography, and media behavior. */
 * {
   box-sizing: border-box;
 }
@@ -61,6 +69,7 @@ button {
   font-family: inherit;
 }
 
+/* Shared layout utilities used across the home page and all planet pages. */
 .container {
   width: min(1160px, 92%);
   margin: 0 auto;
@@ -70,6 +79,7 @@ button {
   display: none !important;
 }
 
+/* Site-wide header, logo, navigation links, and sound-control button. */
 .site-header {
   display: flex;
   align-items: center;
@@ -114,6 +124,7 @@ button {
   color: #67e8f9;
 }
 
+/* Home-page hero: two-column mission introduction and responsive headline text. */
 .hero {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -152,6 +163,7 @@ button {
   font-size: 1.15rem;
 }
 
+/* Reusable rows for calls to action and small planet metadata chips. */
 .actions,
 .planet-meta {
   display: flex;
@@ -160,6 +172,7 @@ button {
   margin-top: 24px;
 }
 
+/* Primary and secondary buttons, including keyboard-focus and hover feedback. */
 .button {
   display: inline-flex;
   align-items: center;
@@ -190,6 +203,7 @@ button {
   background: var(--surface-alt);
 }
 
+/* Shared elevated card appearance for mission, passport, quiz, and planet panels. */
 .transmission,
 .passport-card,
 .quiz-card,
@@ -206,6 +220,7 @@ button {
   min-height: 300px;
 }
 
+/* Mission-transmission header and survival-score rows share flexbox alignment. */
 .transmission-head,
 .survival-row {
   display: flex;
@@ -231,6 +246,7 @@ button {
   font-weight: 800;
 }
 
+/* The launch class is added by index.js, triggering the rocket's exit animation. */
 .rocket {
   position: absolute;
   top: 18%;
@@ -249,6 +265,7 @@ button {
   }
 }
 
+/* typeText() temporarily adds .cursor; this pseudo-element supplies its blinking caret. */
 .cursor::after {
   content: "|";
   animation: blink 0.8s step-end infinite;
@@ -260,6 +277,7 @@ button {
   }
 }
 
+/* Generic content-section spacing and heading scale. */
 .section {
   padding: 64px 0;
 }
@@ -275,6 +293,7 @@ button {
   line-height: 1.1;
 }
 
+/* Responsive grid of links to the eight individual planet pages. */
 .planet-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -297,6 +316,7 @@ button {
   transform: translateY(-4px);
 }
 
+/* Planet-card image crop, text spacing, and the JavaScript-controlled visited badge. */
 .planet-card img {
   display: block;
   width: 100%;
@@ -332,6 +352,7 @@ button {
   font-weight: 700;
 }
 
+/* Two-column content shells and four-column passport/statistic grids. */
 .two-column,
 .content-layout {
   display: grid;
@@ -347,6 +368,7 @@ button {
   gap: 12px;
 }
 
+/* Progress and survival bars: JavaScript changes a child element's width to show a value. */
 .progress-track,
 .survival-meter {
   height: 14px;
@@ -363,6 +385,7 @@ button {
   background: var(--accent);
 }
 
+/* Passport stamps and statistic cards; .visited is toggled from common.js. */
 .passport-stamp,
 .stat-card {
   min-height: 90px;
@@ -393,6 +416,7 @@ button {
   text-align: center;
 }
 
+/* Quiz answer layout and the correct/wrong states assigned by JavaScript. */
 .quiz-options {
   display: grid;
   gap: 10px;
@@ -431,6 +455,7 @@ button {
   font-weight: 700;
 }
 
+/* Individual planet-page hero, photograph, title, description, and metadata. */
 .planet-hero {
   padding: 64px 0 28px;
 }
@@ -487,6 +512,7 @@ button {
   font-size: 0.8rem;
 }
 
+/* Planet statistics and article-style fact cards. */
 .stats-grid {
   margin-top: 42px;
 }
@@ -516,6 +542,7 @@ button {
   padding: 7px 0;
 }
 
+/* Sticky sidebar tools: random fact output, survival hazards, and full-width button. */
 .sticky {
   position: sticky;
   top: 24px;
@@ -538,6 +565,7 @@ button {
   padding-left: 20px;
 }
 
+/* Previous/home/next navigation at the bottom of every planet page. */
 .pager {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -557,6 +585,7 @@ button {
   text-align: right;
 }
 
+/* Easter-egg UI created and toggled by common.js and planet.js. */
 .easter-toast {
   position: fixed;
   bottom: 24px;
@@ -593,6 +622,7 @@ button {
   }
 }
 
+/* Shared footer for the home and planet pages. */
 .site-footer {
   margin-top: 40px;
   border-top: 1px solid var(--border);
@@ -601,6 +631,7 @@ button {
   text-align: center;
 }
 
+/* Tablet layout: collapse major two-column areas and reduce the planet grid to two columns. */
 @media (max-width: 900px) {
   .hero,
   .planet-hero-grid,
@@ -626,6 +657,7 @@ button {
   }
 }
 
+/* Phone layout: simplify navigation and stack card/stat grids into one column. */
 @media (max-width: 600px) {
   .site-header {
     align-items: flex-start;
@@ -658,6 +690,7 @@ button {
   }
 }
 
+/* Accessibility: nearly eliminate motion when the operating system requests reduced motion. */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

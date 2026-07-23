@@ -14,7 +14,12 @@ Users can view random fun facts of a planet in our solar system by clicking on e
   statistics, and other shared page sections.
 - Added responsive layouts so the pages adjust for desktop, tablet, and mobile
   screen sizes.
+- Removed old prototype files to reduce clutter.
 
-This stylesheet is the first basic version of the design. The visual styling
-will be developed and improved gradually in future commits.
+## Use of AI and outside resources
+Htet:
+- Asked ChatGPT for ideas on the planet quizzes.
+- Obtained audio for button sounds on web.
 
+Emily:
+- Asked Gemini about formatting photos into buttons (in the beginning stages). Only asked for clarification on how buttons work, not for Gemini to write code for me.
